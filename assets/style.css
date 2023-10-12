@@ -370,4 +370,9 @@ header h2 {
   .btn:hover .toolip {
    display: none;
   }
+  .footer{
+    font-size: 14px;
+  }
 }
+
+/* CSS cho thông báo toast */

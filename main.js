@@ -11,6 +11,10 @@ const btnrepeat = $(".btn-repeat");
 const btnrandom = $(".btn-random");
 const playlist = $(".playlist");
 const toasty = document.querySelector(".toasty");
+const warningToast = document.getElementById('warning-toast');
+const successToast = document.getElementById('success-toast');
+const closeWarningToastButton = document.getElementById('close-warning-toast');
+const closeSuccessToastButton = document.getElementById('close-success-toast');
 
 const tableswith = $(".tableswith");
 const data = datas;
@@ -58,9 +62,7 @@ const app = {
     document.title = songs.name;
 
 
-    audio.onloadedmetadata = function () {
-        console.log('e');
-    };
+    
   },
 
   handleeven: function () {
@@ -161,9 +163,7 @@ const app = {
           audio.play();
         }
 
-        if (e.target.closest(".option")) {
-          console.log("bạn đã bấm vào nút 3 chấm");
-        }
+       
       }
     };
 
@@ -236,6 +236,8 @@ const app = {
     this.rendersong();
     audio.play();
   },
+
+
 
   iswave: function (s) {
     let wave = $$(".wave");
